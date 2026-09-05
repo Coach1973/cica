@@ -438,7 +438,29 @@ footer{padding:clamp(48px,6vw,76px) 0 44px;border-top:1px solid var(--line2);bac
   .btn{width:100%;justify-content:center}
   .hero-pill{font-size:20px;padding:11px 18px}
 }
+
+/* ---------- language switcher ---------- */
+.langsw{display:flex;align-items:center;gap:3px;border:1px solid var(--line);
+  border-radius:999px;padding:4px;background:rgba(255,255,255,.04);flex:none}
+.langsw a{font-size:18px;font-weight:700;line-height:1;text-decoration:none;color:var(--tx2);
+  padding:9px 13px;border-radius:999px;transition:background .2s,color .2s;white-space:nowrap}
+.langsw a:hover{color:#fff;background:rgba(255,255,255,.09)}
+.langsw a.on{background:var(--grad);color:#0A0810}
+#drawer .langsw{display:inline-flex;margin:6px 0 14px;border-bottom:0}
+#drawer .langsw a{display:inline-block;padding:11px 16px;border-bottom:0;font-size:19px}
+.drawer-lang{display:none}
+@media (max-width:1180px){
+  .langsw a{padding:8px 10px}
+}
+@media (max-width:1000px){
+  .nav-in .langsw{display:none}
+  .drawer-lang{display:block}
+}
 </style>
+<link rel="alternate" hreflang="zh-Hant" href="index.html">
+<link rel="alternate" hreflang="en" href="index-en.html">
+<link rel="alternate" hreflang="vi" href="index-vi.html">
+<link rel="alternate" hreflang="x-default" href="index.html">
 </head>
 <body id="top">
 
@@ -456,11 +478,24 @@ footer{padding:clamp(48px,6vw,76px) 0 44px;border-top:1px solid var(--line2);bac
 <a href="#gallery">照片牆</a>
 <a href="#people">貴賓與創作者</a>
 <a href="#press">媒體報導</a></nav>
+    <div class="langsw" role="group" aria-label="語言">
+<a href="index.html" hreflang="zh-Hant" lang="zh-Hant" class="on" aria-current="true">中</a>
+<a href="index-en.html" hreflang="en" lang="en">EN</a>
+<a href="index-vi.html" hreflang="vi" lang="vi">VI</a>
+</div>
     <a class="nav-cta desk" href="#join">加入協會</a>
     <button id="burger" aria-label="開啟選單" aria-expanded="false" aria-controls="drawer"><span></span></button>
   </div>
 </header>
-<div id="drawer"><a href="#about">關於協會</a>
+<div id="drawer">
+<div class="drawer-lang">
+<div class="langsw" role="group" aria-label="語言">
+<a href="index.html" hreflang="zh-Hant" lang="zh-Hant" class="on" aria-current="true">中</a>
+<a href="index-en.html" hreflang="en" lang="en">EN</a>
+<a href="index-vi.html" hreflang="vi" lang="vi">VI</a>
+</div>
+</div>
+<a href="#about">關於協會</a>
 <a href="#why">為什麼加入</a>
 <a href="#founder">理事長</a>
 <a href="#tystar">TY Star</a>
